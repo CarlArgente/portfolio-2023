@@ -15,7 +15,6 @@ align-items: center;
     padding: 0px;
 }
 `
-
 const Wrapper = styled.div`
 position: relative;
 display: flex;
@@ -30,7 +29,6 @@ gap: 12px;
     flex-direction: column;
 }
 `
-
 const Title = styled.div`
 font-size: 42px;
 text-align: center;
@@ -42,7 +40,6 @@ margin-top: 20px;
       font-size: 32px;
   }
 `;
-
 const Desc = styled.div`
     font-size: 18px;
     text-align: center;
@@ -53,8 +50,6 @@ const Desc = styled.div`
         font-size: 16px;
     }
 `;
-
-
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -67,14 +62,12 @@ const ContactForm = styled.form`
   margin-top: 28px;
   gap: 12px;
 `
-
 const ContactTitle = styled.div`
   font-size: 24px;
   margin-bottom: 6px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `
-
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -88,7 +81,6 @@ const ContactInput = styled.input`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `
-
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
@@ -102,7 +94,6 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `
-
 const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
@@ -119,9 +110,6 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `
-
-
-
 const Contact = () => {
 
   //hooks
@@ -130,10 +118,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    emailjs.sendForm('service_zvz5sdb', 'template_6gjsgs1', e.target, 'Hfx6SIMK9H5ZAN4qS')
       .then((result) => {
         setOpen(true);
-        form.current.reset();
+        e.target.reset();
       }, (error) => {
         console.log(error.text);
       });

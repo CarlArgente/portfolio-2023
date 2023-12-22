@@ -6,6 +6,9 @@ import Inventory from "../images/Project_Inventory.png";
 import AudioNex from "../images/Project_AudioNex.png";
 import Tecs from "../images/Project_Tecs.png";
 import Voting from "../images/Project_Voting.png";
+import Zyrus from '../images/person_zyrus.jpg';
+import Din from '../images/person_din.jpg';
+import Enrico from '../images/person_enrico.jpg';
 
 export const Bio = {
   name: "Carl Emerson Llamera Argente",
@@ -25,7 +28,31 @@ export const Bio = {
   insta: "https://www.instagram.com/ce_argente/",
   facebook: "https://www.facebook.com/carl.argente.3",
 };
+export const TestimonialPersons = [
+  {
+    image: Zyrus,
+    name : "Christian Zyrus Diaz Manglapus",
+    company : "WNO Electronics Trading",
+    position : "Lead Developer",
+    desc : "“Carl's passion for top-notch work is evident in his meticulous attention to detail and relentless pursuit of perfection. His dedication, skill, and positive attitude make him an invaluable asset to any team.“"
+  },
+  {
+    image: Din,
+    name : "Din Marunan",
+    company : "Accenture Inc.",
+    position : "Associate Software Engineer",
+    desc : "“Worked closely with Carl on a challenging project. His exceptional skills and dedication left an indelible mark on our success. Carl is a brilliant developer, translating complex concepts into efficient code.“"
 
+  },
+  {
+    image: Enrico,
+    name : "Enrico Emil Dela Rosa",
+    company : "GECO Asia Pte Ltd",
+    position : "Fullstack Web Developer",
+    desc : "“Carl Emerson Argente is very hard working and very diligent. Does not put off work. Analytical and a great problem solver. We have given him the nickname, “Backend King“ .“ "
+    
+  },
+];
 export const skills = [
   {
     title: "Frontend",
