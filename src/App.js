@@ -16,6 +16,8 @@ import ProjectDetails from "./components/ProjectDetails";
 import Feedback from "./components/Feedback";
 import styled from "styled-components";
 import ScrollButton from "./components/ButtonScroll/ButtonScroll";
+import { DNA } from "react-loader-spinner";
+
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
@@ -37,34 +39,63 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 function App() {
+  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router>
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Feedback />
-          </Wrapper>
-          <Wrapper>
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state && (
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          )}
-          <ScrollButton/>
-        </Body>
-      </Router>
+      {loading ? (
+        <DNA
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="dna-loading"
+          wrapperStyle={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+          wrapperClass="dna-wrapper"
+        />
+      ) : (
+        <div className="fade-in">
+          <Router>
+            <Navbar />
+            <Body>
+              <HeroSection />
+              <Wrapper>
+                <Skills />
+                <Experience />
+              </Wrapper>
+              <Projects openModal={openModal} setOpenModal={setOpenModal} />
+              <Wrapper>
+                <Education />
+                <Feedback />
+              </Wrapper>
+              <Wrapper>
+                <Contact />
+              </Wrapper>
+              <Footer />
+              {openModal.state && (
+                <ProjectDetails
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              )}
+              <ScrollButton />
+            </Body>
+          </Router>
+        </div>
+      )}
     </ThemeProvider>
   );
 }

@@ -9,6 +9,9 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { education, TestimonialPersons } from "../../data/constants";
 import FeedbackCard from "../Cards/FeedbackCard";
 
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+
 export const Container = styled.div`
   background: linear-gradient(
     343.07deg,
@@ -76,8 +79,6 @@ const Desc = styled.div`
   }
 `;
 
-
-
 const index = () => {
   return (
     <Container id="feedback">
@@ -87,7 +88,9 @@ const index = () => {
       </Wrapper>
       <CardContainer>
         {TestimonialPersons.map((TestimonialPersons, index) => (
-          <FeedbackCard TestimonialPersons={TestimonialPersons} />
+          <ScrollAnimation animateIn="animate__zoomIn" animateOnce={true}>
+            <FeedbackCard TestimonialPersons={TestimonialPersons} />
+          </ScrollAnimation>
         ))}
       </CardContainer>
     </Container>

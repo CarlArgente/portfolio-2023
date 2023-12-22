@@ -190,7 +190,7 @@ export const skills = [
           "https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Rabbit.png/_jcr_content/renditions/cq5dam.web.1280.1280.png",
       },
       {
-        name: "VS Code",
+        name: "Visual Studio Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
