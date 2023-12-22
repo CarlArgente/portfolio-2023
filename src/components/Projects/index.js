@@ -12,7 +12,7 @@ const Projects = ({openModal,setOpenModal}) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+          I have worked on a wide range of projects. From desktop apps to web apps. Here are some of my projects.
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
@@ -21,22 +21,28 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+          {toggle === 'Point of Sale' ?
+            <ToggleButton active value="Point of Sale" onClick={() => setToggle('Point of Sale')}>Point of Sale</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="Point of Sale" onClick={() => setToggle('Point of Sale')}>Point of Sale</ToggleButton>
           }
           <Divider />
-          {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+          {toggle === 'Warehouse Management' ?
+            <ToggleButton active value="Warehouse Management" onClick={() => setToggle('Warehouse Management')}>Warehouse Management</ToggleButton>
             :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+            <ToggleButton value="Warehouse Management" onClick={() => setToggle('Warehouse Management')}>Warehouse Management</ToggleButton>
           }
           <Divider />
-          {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+          {toggle === 'Voting Management' ?
+            <ToggleButton active value="Voting Management" onClick={() => setToggle('Voting Management')}>Voting Management</ToggleButton>
             :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+            <ToggleButton value="Voting Management" onClick={() => setToggle('Voting Management')}>Voting Management</ToggleButton>
+          }
+             <Divider />
+          {toggle === 'Cloud Apps' ?
+            <ToggleButton active value="Cloud Apps" onClick={() => setToggle('Cloud Apps')}>Cloud Apps</ToggleButton>
+            :
+            <ToggleButton value="Cloud Apps" onClick={() => setToggle('Cloud Apps')}>Cloud Apps</ToggleButton>
           }
         </ToggleButtonGroup>
         <CardContainer>
