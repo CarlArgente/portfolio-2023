@@ -22,7 +22,7 @@ export const Bio = {
     "Versatile Microsoft DevOps and Developer with expertise in automating build, deployment, and release processes. Proficient in Azure DevOps, CI/CD pipelines, and coding. Adept at optimizing development workflows for efficiency and reliability.",
   github: "https://github.com/CarlArgente",
   resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+    "https://drive.google.com/file/d/1aJpnYuZQ1w3MlQayYeo36q4QLwllO5_W/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/carl-argente/",
   twitter: "https://twitter.com/argente_carl",
   insta: "https://www.instagram.com/ce_argente/",
